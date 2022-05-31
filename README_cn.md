@@ -7,19 +7,19 @@
 * 【2022/03/24】新增[YOLOX](configs/yolox)目标检测模型，支持nano/tiny/s/m/l/x版本，x版本COCO val2017数据集精度51.8%。
 
 
-## [ModelZoo](configs/yolox/README.md) on COCO
+## [ModelZoo](configs/yolox) on COCO
 
 | 网络模型     | 输入尺寸|  mAP(pytorch)  |  mAP(paddle) |   模型推理耗时(ms)(paddle)  |    下载链接       | 配置文件 |
 | :---------- | :---- | :-------:      | :------:     | :-----------------:     |:---------------: | :-----: |
-| YOLOX-nano  |  416  |   25.8         |  26.1    |  2.3    |[model](https://paddledet.bj.bcebos.com/models/yolox_nano_300e_coco.pdparams) | [config](configs/yolox//yolox_nano_300e_coco.yml) |
-| YOLOX-tiny  |  416  |   32.8         |  32.9    |  2.8    |[model](https://paddledet.bj.bcebos.com/models/yolox_tiny_300e_coco.pdparams) | [config](configs/yolox//yolox_tiny_300e_coco.yml) |
-| YOLOX-s     |  640  |   40.5         |  40.4    |  3.0    |[model](https://paddledet.bj.bcebos.com/models/yolox_s_300e_coco.pdparams) | [config](configs/yolox//yolox_s_300e_coco.yml) |
-| YOLOX-m     |  640  |   46.9         |  46.9    |  5.8    |[model](https://paddledet.bj.bcebos.com/models/yolox_m_300e_coco.pdparams) | [config](configs/yolox//yolox_m_300e_coco.yml) |
-| YOLOX-l     |  640  |   49.7         |  50.1    |  9.3    |[model](https://paddledet.bj.bcebos.com/models/yolox_l_300e_coco.pdparams) | [config](configs/yolox//yolox_l_300e_coco.yml) |
-| YOLOX-x     |  640  |   51.1         |  51.8    |  16.6    |[model](https://paddledet.bj.bcebos.com/models/yolox_x_300e_coco.pdparams) | [config](configs/yolox//yolox_x_300e_coco.yml) |
+| YOLOX-nano  |  416  |   25.8         |  26.1    |  2.3    |[model](https://paddledet.bj.bcebos.com/models/yolox_nano_300e_coco.pdparams) | [config](configs/yolox/yolox_nano_300e_coco.yml) |
+| YOLOX-tiny  |  416  |   32.8         |  32.9    |  2.8    |[model](https://paddledet.bj.bcebos.com/models/yolox_tiny_300e_coco.pdparams) | [config](configs/yolox/yolox_tiny_300e_coco.yml) |
+| YOLOX-s     |  640  |   40.5         |  40.4    |  3.0    |[model](https://paddledet.bj.bcebos.com/models/yolox_s_300e_coco.pdparams) | [config](configs/yolox/yolox_s_300e_coco.yml) |
+| YOLOX-m     |  640  |   46.9         |  46.9    |  5.8    |[model](https://paddledet.bj.bcebos.com/models/yolox_m_300e_coco.pdparams) | [config](configs/yolox/yolox_m_300e_coco.yml) |
+| YOLOX-l     |  640  |   49.7         |  50.1    |  9.3    |[model](https://paddledet.bj.bcebos.com/models/yolox_l_300e_coco.pdparams) | [config](configs/yolox/yolox_l_300e_coco.yml) |
+| YOLOX-x     |  640  |   51.1         |  51.8    |  16.6    |[model](https://paddledet.bj.bcebos.com/models/yolox_x_300e_coco.pdparams) | [config](configs/yolox/yolox_x_300e_coco.yml) |
 
 **注意:**
- - 具体精度和速度细节请查看[yolox](configs/yolox/README.md)
+ - 具体精度和速度细节请查看[yolox](configs/yolox)
 
 
 ## TODO
