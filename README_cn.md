@@ -9,14 +9,14 @@
 
 ## [ModelZoo](configs/yolox/README.md) on COCO
 
-| model       | size  |  mAP(pytorch)  |  mAP(paddle) |     download       | config |
-| :---------- | :---- | :-------:      | :------:     | :-------------: | :-----: |
-| YOLOX-nano  |  416  |   25.8         |  26.1    |[model](https://paddledet.bj.bcebos.com/models/yolox_nano_300e_coco.pdparams) | [config](configs/yolox//yolox_nano_300e_coco.yml) |
-| YOLOX-tiny  |  416  |   32.8         |  32.9    |[model](https://paddledet.bj.bcebos.com/models/yolox_tiny_300e_coco.pdparams) | [config](configs/yolox//yolox_tiny_300e_coco.yml) |
-| YOLOX-s     |  640  |   40.5         |  40.4    |[model](https://paddledet.bj.bcebos.com/models/yolox_s_300e_coco.pdparams) | [config](configs/yolox//yolox_s_300e_coco.yml) |
-| YOLOX-m     |  640  |   46.9         |  46.9    |[model](https://paddledet.bj.bcebos.com/models/yolox_m_300e_coco.pdparams) | [config](configs/yolox//yolox_m_300e_coco.yml) |
-| YOLOX-l     |  640  |   49.7         |  50.1    |[model](https://paddledet.bj.bcebos.com/models/yolox_l_300e_coco.pdparams) | [config](configs/yolox//yolox_l_300e_coco.yml) |
-| YOLOX-x     |  640  |   51.1         |  51.8    |[model](https://paddledet.bj.bcebos.com/models/yolox_x_300e_coco.pdparams) | [config](configs/yolox//yolox_x_300e_coco.yml) |
+| 网络模型     | 输入尺寸|  mAP(pytorch)  |  mAP(paddle) |   模型推理耗时(ms)(paddle)  |    下载链接       | 配置文件 |
+| :---------- | :---- | :-------:      | :------:     | :-----------------:     |:---------------: | :-----: |
+| YOLOX-nano  |  416  |   25.8         |  26.1    |  2.3    |[model](https://paddledet.bj.bcebos.com/models/yolox_nano_300e_coco.pdparams) | [config](configs/yolox//yolox_nano_300e_coco.yml) |
+| YOLOX-tiny  |  416  |   32.8         |  32.9    |  2.8    |[model](https://paddledet.bj.bcebos.com/models/yolox_tiny_300e_coco.pdparams) | [config](configs/yolox//yolox_tiny_300e_coco.yml) |
+| YOLOX-s     |  640  |   40.5         |  40.4    |  3.0    |[model](https://paddledet.bj.bcebos.com/models/yolox_s_300e_coco.pdparams) | [config](configs/yolox//yolox_s_300e_coco.yml) |
+| YOLOX-m     |  640  |   46.9         |  46.9    |  5.8    |[model](https://paddledet.bj.bcebos.com/models/yolox_m_300e_coco.pdparams) | [config](configs/yolox//yolox_m_300e_coco.yml) |
+| YOLOX-l     |  640  |   49.7         |  50.1    |  9.3    |[model](https://paddledet.bj.bcebos.com/models/yolox_l_300e_coco.pdparams) | [config](configs/yolox//yolox_l_300e_coco.yml) |
+| YOLOX-x     |  640  |   51.1         |  51.8    |  16.6    |[model](https://paddledet.bj.bcebos.com/models/yolox_x_300e_coco.pdparams) | [config](configs/yolox//yolox_x_300e_coco.yml) |
 
 **注意:**
  - 具体精度和速度细节请查看[yolox](configs/yolox/README.md)
@@ -32,7 +32,7 @@
   - [ ] Objects365 pretrain
 
 
-=====================================================================================================
+======================================================
 
 
 简体中文 | [English](README_en.md)
