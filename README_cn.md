@@ -22,12 +22,16 @@
 | YOLOX-l     |  640  |   49.7         |  50.1    |  9.3    |[model](https://paddledet.bj.bcebos.com/models/yolox_l_300e_coco.pdparams) | [config](configs/yolox/yolox_l_300e_coco.yml) |
 | YOLOX-x     |  640  |   51.1         |  51.8    |  16.6    |[model](https://paddledet.bj.bcebos.com/models/yolox_x_300e_coco.pdparams) | [config](configs/yolox/yolox_x_300e_coco.yml) |
 
+| 网络网络        | 输入尺寸   | 图片数/GPU | 学习率策略 | 模型推理耗时(ms) | mAP<sup>val<br>0.5:0.95 | mAP<sup>val<br>0.5 |    下载链接       | 配置文件 |
+| :------------- | :------- | :-------: | :------: | :---------: | :-----------: | :-----------: |:-------------: | :-----: |
+| YOLOXv2-tiny     |  416     |    8      |   300e    |     1.9    |  32.4  |  50.2 | [下载链接](https://paddledet.bj.bcebos.com/models/yoloxv2_tiny_300e_coco.pdparams) | [配置文件](configs/yolox/yoloxv2_tiny_300e_coco.yml) |
+
 **注意:**
  - 具体精度和速度细节请查看[yolox](configs/yolox)
 
 
 ## TODO
-  - [ ] 换与YOLOv5最新版相同主干网络结构
+  - [x] 换与YOLOv5最新版相同主干网络结构--YOLOXv2
   - [ ] YOLOX-P6、YOLOX-P2
   - [ ] 换主干网络：CSP-ResNet
   - [ ] Transformer modules
