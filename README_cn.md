@@ -39,12 +39,12 @@
 
 **注意:**
  - 具体精度和速度细节请查看[yolox](configs/yolox)
- - ConvNeXt模型请查看[convnext]](configs/convnext)
+ - ConvNeXt模型请查看[convnext](configs/convnext)
 
 
 ## TODO
   - [x] 换与YOLOv5最新版相同主干网络结构--YOLOX-cdn
-  - [x] 换主干网络：CSP-ResNet
+  - [x] 换主干网络：CSP-ResNet(crn)
   - [x] YOLOX-ConvNeXt
   - [ ] Transformer modules
   - [ ] 更多Data Augmentation、Attention Module、Loss
