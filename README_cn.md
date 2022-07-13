@@ -8,6 +8,7 @@
 
 
 ## Updates!
+* 【2022/06/26】新增[YOLOX-ConvNeXt](configs/convnext)目标检测模型，s版本COCO val2017数据集精度44.6%。
 * 【2022/03/24】新增[YOLOX](configs/yolox)目标检测模型，支持nano/tiny/s/m/l/x版本，x版本COCO val2017数据集精度51.8%。
 
 
@@ -22,18 +23,29 @@
 | YOLOX-l     |  640  |   49.7         |  50.1    |  9.3    |[model](https://paddledet.bj.bcebos.com/models/yolox_l_300e_coco.pdparams) | [config](configs/yolox/yolox_l_300e_coco.yml) |
 | YOLOX-x     |  640  |   51.1         |  51.8    |  16.6    |[model](https://paddledet.bj.bcebos.com/models/yolox_x_300e_coco.pdparams) | [config](configs/yolox/yolox_x_300e_coco.yml) |
 
-| 网络网络        | 输入尺寸   | 图片数/GPU | 学习率策略 | 模型推理耗时(ms) | mAP<sup>val<br>0.5:0.95 | mAP<sup>val<br>0.5 |    下载链接       | 配置文件 |
-| :------------- | :------- | :-------: | :------: | :---------: | :-----------: | :-----------: |:-------------: | :-----: |
-| YOLOXv2-tiny     |  416     |    8      |   300e    |     1.9    |  32.4  |  50.2 | [下载链接](https://paddledet.bj.bcebos.com/models/yoloxv2_tiny_300e_coco.pdparams) | [配置文件](configs/yolox/yoloxv2_tiny_300e_coco.yml) |
+### 小型Backbone
+| 网络网络        | 输入尺寸   | 图片数/GPU | 学习率策略 | 模型推理耗时(ms) | mAP<sup>val<br>0.5:0.95 | mAP<sup>val<br>0.5 |    Params(M)       | FLOPs(G) |    下载链接       | 配置文件|
+| :------------- | :------- | :-------: | :------: | :---------: | :----: |: ---: | :----: | :---: |:-------------: | :-----: |
+| YOLOX-tiny     |  416     |    8      |   300e    |     2.8    |  32.9  |  50.4 |  5.06  |  6.45 | [下载链接](https://paddledet.bj.bcebos.com/models/yolox_tiny_300e_coco.pdparams) | [配置文件](configs/yolox/yolox_tiny_300e_coco.yml) |
+| YOLOX-cdn-tiny |  416     |    8      |   300e    |     1.9    |  32.4  |  50.2 |  5.03 |  6.33  | [下载链接](https://paddledet.bj.bcebos.com/models/yolox_cdn_tiny_300e_coco.pdparams) | [配置文件](configs/yolox/yolox_cdn_tiny_300e_coco.yml) |
+| YOLOX-s        |  640     |    8      |   300e    |     3.0    |  40.4  |  59.6 |  9.0  |  26.8 | [下载链接](https://paddledet.bj.bcebos.com/models/yolox_s_300e_coco.pdparams) | [配置文件](configs/yolox/yolox_s_300e_coco.yml) |
+| YOLOX-crn-s     |  640     |    8      |   300e    |     3.0    |  40.4  |  59.6 |  7.7  |  24.69 | [下载链接](https://paddledet.bj.bcebos.com/models/yolox_crn_s_300e_coco.pdparams) | [配置文件](configs/yolox/yolox_crn_s_300e_coco.yml) |
+
+### 大型Backbone
+| 网络网络        | 输入尺寸   | 图片数/GPU | 学习率策略 | 模型推理耗时(ms) | mAP<sup>val<br>0.5:0.95 | mAP<sup>val<br>0.5 |    Params(M)       | FLOPs(G) |    下载链接       | 配置文件|
+| :------------- | :------- | :-------: | :------: | :---------: | :----: |: ---: | :----: | :---: |:-------------: | :-----: |
+| YOLOX-crn-s     |  640     |    8      |   300e    |     3.0    |  40.4  |  59.6 |  7.7  |  24.69 | [下载链接](https://paddledet.bj.bcebos.com/models/yolox_crn_s_300e_coco.pdparams) | [配置文件](configs/yolox/yolox_crn_s_300e_coco.yml) |
+| YOLOX-ConvNeXt-s|  640     |    8      |   36e     |     -      |  **44.6**  |  **65.3** |  36.2 |  27.52 | [下载链接](https://paddledet.bj.bcebos.com/models/yolox_convnext_s_36e_coco.pdparams) | [配置文件](configs/convnext/yolox_convnext_s_36e_coco.yml) |
 
 **注意:**
  - 具体精度和速度细节请查看[yolox](configs/yolox)
+ - ConvNeXt模型请查看[convnext]](configs/convnext)
 
 
 ## TODO
-  - [x] 换与YOLOv5最新版相同主干网络结构--YOLOXv2
-  - [ ] YOLOX-P6、YOLOX-P2
-  - [ ] 换主干网络：CSP-ResNet
+  - [x] 换与YOLOv5最新版相同主干网络结构--YOLOX-cdn
+  - [x] 换主干网络：CSP-ResNet
+  - [x] YOLOX-ConvNeXt
   - [ ] Transformer modules
   - [ ] 更多Data Augmentation、Attention Module、Loss
   - [ ] 精简代码只保留YOLO系列模型(YOLOv3、PP-YOLO、PP-YOLOv2、PP-YOLOE、YOLOX)
@@ -70,11 +82,7 @@
 
 - 🔥 **2022.3.24：PaddleDetection发布[release/2.4版本](https://github.com/PaddlePaddle/PaddleDetection/tree/release/2.4)**
 
-<<<<<<< HEAD
-  - 发布高精度云边一体SOTA目标检测模型[PP-YOLOE](configs/ppyoloe)，发布s/m/l/x版本，l版本COCO test2017数据集精度51.4%，V100预测速度78.1 FPS，支持混合精度训练，训练较PP-YOLOv2加速33%，全系列多尺度模型，满足不同硬件算力需求，可适配服务器、边缘端GPU及其他服务器端AI加速卡。
-=======
   - 发布高精度云边一体SOTA目标检测模型[PP-YOLOE](configs/ppyoloe)，提供s/m/l/x版本，l版本COCO test2017数据集精度51.6%，V100预测速度78.1 FPS，支持混合精度训练，训练较PP-YOLOv2加速33%，全系列多尺度模型，满足不同硬件算力需求，可适配服务器、边缘端GPU及其他服务器端AI加速卡。
->>>>>>> upstream/develop
   - 发布边缘端和CPU端超轻量SOTA目标检测模型[PP-PicoDet增强版](configs/picodet)，精度提升2%左右，CPU预测速度提升63%，新增参数量0.7M的PicoDet-XS模型，提供模型稀疏化和量化功能，便于模型加速，各类硬件无需单独开发后处理模块，降低部署门槛。
   - 发布实时行人分析工具[PP-Human](deploy/pipeline)，支持行人跟踪、人流量统计、人体属性识别与摔倒检测四大能力，基于真实场景数据特殊优化，精准识别各类摔倒姿势，适应不同环境背景、光线及摄像角度。
   - 新增[YOLOX](configs/yolox)目标检测模型，支持nano/tiny/s/m/l/x版本，x版本COCO val2017数据集精度51.8%。
@@ -88,21 +96,7 @@
   - 发布[Sniper](configs/sniper)小目标检测优化模型，发布针对EdgeBoard优化[PP-YOLO-EB](configs/ppyolo)模型。
   - 新增轻量化关键点模型[Lite HRNet](configs/keypoint)关键点模型并支持Paddle Lite部署。
 
-<<<<<<< HEAD
-- 2021.08.10: PaddleDetection发布[release/2.2版本](https://github.com/PaddlePaddle/PaddleDetection/tree/release/2.2)
-
-  - 发布Transformer检测系列模型，包括[DETR](configs/detr), [Deformable DETR](configs/deformable_detr), [Sparse RCNN](configs/sparse_rcnn)。
-  - 新增Dark HRNet关键点模型和MPII数据集[关键点模型](configs/keypoint)
-  - 新增[人头](configs/mot/headtracking21)、[车辆](configs/mot/vehicle)跟踪垂类模型。
-
-- 2021.05.20: PaddleDetection发布[release/2.1版本](https://github.com/PaddlePaddle/PaddleDetection/tree/release/2.1)
-
-  - 新增[关键点检测](configs/keypoint)，模型包括HigherHRNet，HRNet。
-  - 新增[多目标跟踪](configs/mot)能力，模型包括DeepSORT，JDE，FairMOT。
-  - 发布PPYOLO系列模型压缩模型，新增[ONNX模型导出教程](deploy/EXPORT_ONNX_MODEL.md)。
-=======
 - [更多版本发布](https://github.com/PaddlePaddle/PaddleDetection/releases)
->>>>>>> upstream/develop
 
 ## <img title="" src="https://user-images.githubusercontent.com/48054808/157795569-9fc77c85-732f-4870-9be0-99a7fe2cff27.png" alt="" width="20"> 简介
 
